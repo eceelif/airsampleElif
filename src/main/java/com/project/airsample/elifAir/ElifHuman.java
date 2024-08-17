@@ -1,10 +1,11 @@
 package com.project.airsample.elifAir;
 
+import com.project.airsample.elifAir.interfaces.IAdvantageProgram;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 @Component
-public class ElifHuman implements IAdvantageProgram{
+public class ElifHuman implements IAdvantageProgram {
 
     private String name;
     private String surname;

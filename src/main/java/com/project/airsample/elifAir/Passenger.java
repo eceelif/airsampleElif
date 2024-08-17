@@ -2,6 +2,8 @@ package com.project.airsample.elifAir;
 
 
 import com.project.airsample.elifAir.enums.Flytype;
+import com.project.airsample.elifAir.interfaces.IAdvantageProgram;
+import com.project.airsample.elifAir.interfaces.IPassenger;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

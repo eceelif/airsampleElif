@@ -1,13 +1,13 @@
 package com.project.airsample.controllers.elifFlight;
 
-import com.project.airsample.elifAir.IPassenger;
+import com.project.airsample.elifAir.interfaces.IPassenger;
 import com.project.airsample.elifAir.Passenger;
 import com.project.airsample.elifAir.interfaces.IPersonnelBussines;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/elifAir/passenger")

@@ -1,6 +1,6 @@
 package com.project.airsample.elifAir.airport;
 
-import com.project.airsample.elifAir.IAdvantageProgram;
+import com.project.airsample.elifAir.interfaces.IAdvantageProgram;
 import org.springframework.stereotype.Component;
 
 @Component

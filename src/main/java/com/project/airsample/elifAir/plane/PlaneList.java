@@ -1,12 +1,12 @@
 package com.project.airsample.elifAir.plane;
 
+import com.project.airsample.elifAir.interfaces.IPlaneList;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 @Component("elifPlanelist")
-public class PlaneList implements IPlaneList {
+public abstract class PlaneList implements IPlaneList {
     private ArrayList<Plane> planes = new ArrayList<Plane>();
 
     public ArrayList<Plane> getPlanes(){

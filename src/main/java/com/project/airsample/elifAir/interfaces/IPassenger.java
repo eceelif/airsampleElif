@@ -1,4 +1,6 @@
-package com.project.airsample.elifAir;
+package com.project.airsample.elifAir.interfaces;
+
+import com.project.airsample.elifAir.Passenger;
 
 import java.util.List;
 

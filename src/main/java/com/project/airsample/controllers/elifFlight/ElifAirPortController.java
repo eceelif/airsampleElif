@@ -1,6 +1,6 @@
 package com.project.airsample.controllers.elifFlight;
 
-import com.project.airsample.elifAir.IPassenger;
+import com.project.airsample.elifAir.interfaces.IPassenger;
 import com.project.airsample.elifAir.airport.AirPortList;
 import com.project.airsample.elifAir.airport.Airport;
 import org.springframework.beans.factory.annotation.Autowired;

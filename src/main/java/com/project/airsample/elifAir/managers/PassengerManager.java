@@ -1,6 +1,6 @@
 package com.project.airsample.elifAir.managers;
 
-import com.project.airsample.elifAir.IPassenger;
+import com.project.airsample.elifAir.interfaces.IPassenger;
 import com.project.airsample.elifAir.Passenger;
 import com.project.airsample.elifAir.interfaces.IPassengerManager;
 

@@ -1,14 +1,14 @@
 package com.project.airsample.elifAir.plane;
 
-import com.project.airsample.elifAir.airport.Airport;
 import com.project.airsample.elifAir.enums.Manufacturer;
-import org.springframework.boot.autoconfigure.couchbase.CouchbaseProperties;
+import com.project.airsample.elifAir.interfaces.IPlane;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.List;
 
 @Component("elifPlane")
-public class Plane implements IPlane {
+public abstract class Plane implements IPlane {
 
     private String model;
     private Manufacturer manufacturer;
@@ -138,7 +138,12 @@ public class Plane implements IPlane {
     //DB processes
     public Plane getById(int id){
         //todo: get Plane data from db by id.
-        return new Plane();
+        return new Plane() {
+            @Override
+            public List<Plane> getPlaneByModel(String model) {
+                return List.of();
+            }
+        };
     }
 
     public boolean insertDb(Plane plane){
@@ -154,7 +159,22 @@ public class Plane implements IPlane {
 
     public Plane deleteDb(int id){
         //todo:delete airport with given airport parameter.
-        return new Plane();
+        return new Plane() {
+            @Override
+            public List<Plane> getPlaneByModel(String model) {
+                return List.of();
+            }
+        };
+    }
+
+    public abstract List<Plane> getPlaneByModel(String model);
+
+    @Override
+    public List<Plane> getAll() {
+        return List.of();
+    }
+
+    public void setCity(String city) {
     }
 
 
