@@ -6,59 +6,65 @@ import com.project.airsample.elifAir.plane.Plane;
 
 import java.util.List;
 
-public class PlaneManager extends Plane implements IPlaneManager, IPlane {
+public class PlaneManager implements IPlaneManager, IPlane {
 
     @Override
     public Plane getPlaneById(int id) {
         // Implement the logic to get a plane by its ID
-        // Here, we're returning a new Plane object for demonstration purposes
-        return new Plane() {
-            @Override
-            public List<Plane> getPlaneByModel(String model) {
-                // Return an empty list as a placeholder
-                return List.of();
-            }
-        };
+        return new Plane(); // Returning a new Plane object for demonstration purposes
     }
 
     @Override
     public List<Plane> getAllPlanes() {
         // Implement the logic to get all planes
-        // Returning an empty list as a placeholder
-        return List.of();
+        return List.of(); // Returning an empty list as a placeholder
     }
 
     @Override
     public boolean savePlane(Plane plane) {
         // Implement the logic to save a plane
-        // Returning true as a placeholder for success
-        return true;
+        return true; // Returning true as a placeholder for success
     }
 
     @Override
     public boolean updatePlane(Plane plane) {
         // Implement the logic to update a plane
-        // Returning true as a placeholder for success
-        return true;
+        return true; // Returning true as a placeholder for success
     }
 
     @Override
     public Plane deletePlane(int id) {
         // Implement the logic to delete a plane by its ID
-        // Returning a new Plane object for demonstration purposes
-        return new Plane() {
-            @Override
-            public List<Plane> getPlaneByModel(String model) {
-                // Return an empty list as a placeholder
-                return List.of();
-            }
-        };
+        return new Plane(); // Returning a new Plane object for demonstration purposes
     }
 
     @Override
-    public List<Plane> getPlaneByModel(String model) {
-        // Implement the logic to get planes by model
-        // Returning an empty list as a placeholder
-        return List.of();
+    public Plane getById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+    }
+
+    @Override
+    public boolean insertDb(Plane plane) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insertDb'");
+    }
+
+    @Override
+    public boolean updateDb(Plane plane) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'updateDb'");
+    }
+
+    @Override
+    public Plane deleteDb(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteDb'");
+    }
+
+    @Override
+    public List<Plane> getAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
     }
 }

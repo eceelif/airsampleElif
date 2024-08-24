@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component("elifPlane")
-public abstract class Plane implements IPlane {
+public class Plane implements IPlane {
 
     private String model;
     private Manufacturer manufacturer;
@@ -20,14 +20,15 @@ public abstract class Plane implements IPlane {
     private int doorCount;
     private int emergencyExitCount;
     private long totalFlightTime;
-    private  int aisleCount;
+    private int aisleCount;
 
+    public Plane() {
+    }
 
-    public Plane(){}
     // Constructor
     public Plane(String model, Manufacturer manufacturer, Date purchaseDate, int businessCapacity,
-                 int economyCapacity, int firstClassCapacity, int premiumEconomyCapacity,
-                 int doorCount, int emergencyExitCount, int aisleCount) {
+            int economyCapacity, int firstClassCapacity, int premiumEconomyCapacity,
+            int doorCount, int emergencyExitCount, int aisleCount) {
         this.model = model;
         this.manufacturer = manufacturer;
         this.purchaseDate = purchaseDate;
@@ -40,7 +41,6 @@ public abstract class Plane implements IPlane {
         this.aisleCount = aisleCount;
         this.totalFlightTime = 0;
     }
-
 
     public String getModel() {
         return model;
@@ -130,44 +130,34 @@ public abstract class Plane implements IPlane {
         this.aisleCount = aisleCount;
     }
 
-    // uçağın toplamda kaç saat uçtuğunu takip etmek için. 10.000 saatten sonra bakım gerekir vs. bilgisi lazım olabilir.
+    // uçağın toplamda kaç saat uçtuğunu takip etmek için. 10.000 saatten sonra
+    // bakım gerekir vs. bilgisi lazım olabilir.
     public void addFlightTime(long flighttime) {
         this.totalFlightTime = ++flighttime;
     }
 
-    //DB processes
-    public Plane getById(int id){
-        //todo: get Plane data from db by id.
-        return new Plane() {
-            @Override
-            public List<Plane> getPlaneByModel(String model) {
-                return List.of();
-            }
-        };
-    }
+    // DB processes
+    public Plane getById(int id) {
+        // todo: get Plane data from db by id.
+        return new Plane();
 
-    public boolean insertDb(Plane plane){
-        //todo: insert into db with given Plane parameter
+    };
+
+    public boolean insertDb(Plane plane) {
+        // todo: insert into db with given Plane parameter
         return true;
     }
 
-    public boolean updateDb(Plane plane){
-        //todo : update into db with given Plane parameter.
+    public boolean updateDb(Plane plane) {
+        // todo : update into db with given Plane parameter.
         return true;
     };
 
-
-    public Plane deleteDb(int id){
-        //todo:delete airport with given airport parameter.
-        return new Plane() {
-            @Override
-            public List<Plane> getPlaneByModel(String model) {
-                return List.of();
-            }
-        };
+    public Plane deleteDb(int id) {
+        // todo:delete airport with given airport parameter.
+        return new Plane();
     }
-
-    public abstract List<Plane> getPlaneByModel(String model);
+    // bu hataları düzelterek devam et //
 
     @Override
     public List<Plane> getAll() {
@@ -177,13 +167,9 @@ public abstract class Plane implements IPlane {
     public void setCity(String city) {
     }
 
-
-//    @Override
-//    public int counter() {
-//        return 0;
-//    }
-
-
-
+    // @Override
+    // public int counter() {
+    // return 0;
+    // }
 
 }
